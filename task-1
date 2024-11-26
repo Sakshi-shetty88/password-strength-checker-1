@@ -1,22 +1,39 @@
-import re
+import re  # Importing regular expressions module
 
 def check_password_strength(password):
-    # Check length
+    # Check password length
     if len(password) < 8:
-        return "Weak: Password too short"
+        return "Weak: Password must be at least 8 characters long."
+    # Check for at least one uppercase letter
+    if not re.search(r'[A-Z]', password):
+        return "Weak: Include at least one uppercase letter."
+    # Check for at least one lowercase letter
+    if not re.search(r'[a-z]', password):
+        return "Weak: Include at least one lowercase letter."
+    # Check for at least one digit
+    if not re.search(r'[0-9]', password):
+        return "Weak: Include at least one number."
+    # Check for at least one special character
+    if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
+        return "Weak: Include at least one special character."
 
-    # Check for different character types
-    if not re.search(r"[a-z]", password):
-        return "Weak: Missing lowercase letters"
-    if not re.search(r"[A-Z]", password):
-        return "Weak: Missing uppercase letters"
-    if not re.search(r"[0-9]", password):
-        return "Weak: Missing numbers"
-    if not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
-        return "Weak: Missing special characters"
+    # Check for common passwords
+    common_passwords = ["password", "123456", "qwerty", "letmein", "admin"]
+    if password.lower() in common_passwords:
+        return "Weak: Avoid using common passwords."
+
+    # If all conditions are met
+    return "Strong: Your password is secure!"
+
+# Loop to allow multiple password checks
+while True:
+    # Prompt the user for a password
+    password = input("Enter a password to check (or press 'Enter' to exit): ")
     
-    return "Strong: Password is good"
-
-# Test the function
-password = input("Enter a password to check: ")
-print(check_password_strength(password))
+    # If the user presses 'Enter' or types 'exit', break the loop
+    if password.strip() == "" or password.lower() == "exit":
+        print("Exiting... Goodbye! 👋")
+        break
+    
+    # Print the password strength
+    print(check_password_strength(password))
