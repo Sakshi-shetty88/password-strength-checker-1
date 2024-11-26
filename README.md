@@ -1,8 +1,8 @@
-**NAME: SAKSHI SHETTI
-COMPANY: CODTECH IT SOLUTIONS
-ID: CT08DS10025
-DOMAIN: CYBERSECURITY AND ETHICAL HACKING 
-DURATION: NOVEMBER TO DECEMBER**
+**NAME: SAKSHI SHETTI**
+**COMPANY: CODTECH IT SOLUTIONS**
+**ID: CT08DS10025**
+**DOMAIN: CYBERSECURITY AND ETHICAL HACKING**
+**DURATION: NOVEMBER TO DECEMBER**
 **Project Overview:**
 The Password Strength Checker is a tool designed to evaluate the strength of passwords based on various criteria like length, complexity, and the inclusion of special characters, numbers, and upper/lowercase letters. The goal of this project is to help users assess whether their passwords are secure enough or if they need to be stronger. This tool can provide feedback on passwords, indicating whether they are Weak, Moderate, or Strong based on certain rules.
 
