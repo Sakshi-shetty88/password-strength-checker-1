@@ -78,8 +78,10 @@ For inputting a password, the program will check if it satisfies the criteria an
 
 Weak: "Password is too short, and missing uppercase and special characters."
 
+![Screenshot 2024-12-01 133514](https://github.com/user-attachments/assets/df848152-cb08-4d77-a6b9-3643fb083347)
+
 Moderate: "Password is acceptable, but consider adding special characters."
-![Screenshot 2024-12-01 133524](https://github.com/user-attachments/assets/8b521251-6428-4d5d-995c-ac15222ecf9a)
 
 Strong: "Password is strong and meets all criteria."
+![Screenshot 2024-12-01 133524](https://github.com/user-attachments/assets/8b521251-6428-4d5d-995c-ac15222ecf9a)
 
