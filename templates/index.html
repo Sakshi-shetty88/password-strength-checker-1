@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .weak {
+            color: red;
+        }
+        .strong {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Strength Checker</h1>
+    <form method="POST">
+        <input type="text" name="password" placeholder="Enter your password" required>
+        <button type="submit">Check</button>
+    </form>
+    <div class="message {{ 'weak' if 'Weak' in message else 'strong' }}">
+        {{ message }}
+    </div>
+</body>
+</html>
